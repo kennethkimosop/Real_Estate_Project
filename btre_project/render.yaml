@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: btre-real-estate
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
+    startCommand: gunicorn btre.wsgi:application
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: PYTHON_VERSION
+        value: "3.11"
+databases:
+  - name: btre_db
+    databaseName: btre_db
+    plan: free
