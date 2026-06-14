@@ -1,4 +1,4 @@
-# BTRE - Real Estate Property Listing Website
+# BASIC - Real Estate Property Listing Website
 
 A comprehensive Django-based real estate platform for browsing, searching, and managing property listings with user authentication and contact management.
 
